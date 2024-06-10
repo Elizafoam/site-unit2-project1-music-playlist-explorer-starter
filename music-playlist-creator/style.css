@@ -4,3 +4,12 @@ body {
     padding: 0;
     background-color: #f8f8f8;
 }
+
+footer {
+    text-align: center;
+    background-color: #53484842;
+    width: 100vw;
+    padding: 0.75rem;
+    bottom: 0;
+    left: 0;
+  }
