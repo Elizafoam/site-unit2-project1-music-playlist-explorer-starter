@@ -5,6 +5,101 @@ body {
     background-color: #f8f8f8;
 }
 
+header {
+    background-color: #53484842;
+    padding: 0.25rem;
+}
+
+.playlist-cards {
+    display: flex;
+    padding: 2rem;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+.playlist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(166, 180, 176, 0.87) 0px 3px 8px;
+}
+
+.playlist:hover {
+    box-shadow: rgba(41, 48, 46, 0.87) 0px 3px 8px;
+
+}
+
+.playlist * {
+    margin: 0.5rem;
+}
+
+.playlist-image {
+    width: 300px;
+}
+
+/* CSS for Modal */
+.modal-overlay {
+    display: none;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+ }
+
+ .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888888b4;
+    border-radius: 1rem;
+    width: 80%; /* Could be more or less, depending on screen size */
+ }
+
+.modal-playlist-info {
+    display: flex;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.modal-song-list {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0.25rem;
+    padding-right: 1.25rem;
+    border: 2px solid grey;
+}
+
+.modal-song-info * {
+    margin: 0.35rem;
+}
+
+.modal-song-time {
+    margin-left: auto;
+}
+
+ .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+ }
+
+ .close:hover,
+ .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 footer {
     text-align: center;
     background-color: #53484842;
@@ -12,4 +107,4 @@ footer {
     padding: 0.75rem;
     bottom: 0;
     left: 0;
-  }
+}
