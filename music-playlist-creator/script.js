@@ -41,18 +41,21 @@ function createSongList(){
 
     playlistsElements.forEach((playlist) => {
         playlist.addEventListener("click", (e) => {
-            const image = document.querySelector(".modal-image");
-            const title = document.querySelector(".modal-playlist-title");
-            const creator = document.querySelector(".modal-creator");
-            
-            image.src = playlist.childNodes[0].src;
-            title.textContent = playlist.childNodes[1].textContent;
-            title.id = playlist.id;
-            creator.textContent = playlist.childNodes[2].textContent;
+            if (e.target.className != "like-count"){
+                const image = document.querySelector(".modal-image");
+                const title = document.querySelector(".modal-playlist-title");
+                const creator = document.querySelector(".modal-creator");
+                
+                image.src = playlist.childNodes[0].src;
+                title.textContent = playlist.childNodes[1].textContent;
+                title.id = playlist.id;
+                creator.textContent = playlist.childNodes[2].textContent;
 
-            addSongs(playlist.id);
+                addSongs(playlist.id);
 
-            modal.style.visibility = "initial";
+                modal.style.visibility = "initial";
+
+            }
         })
     });
 }
