@@ -38,12 +38,12 @@ Deployed Application: [Music Playlist Explorer Deployed Site](https://elizafoam.
   - [ ] Add an edit button to each playlist tile.
   - [ ] Users can update the name, creator, and songs of the playlist.
 
-- [ ] **Delete Playlists**
-  - [ ] Add a delete button to each playlist tile.
-  - [ ] When clicked, the playlist is removed from the display and data model.
+- [X] **Delete Playlists**
+  - [X] Add a delete button to each playlist tile.
+  - [X] When clicked, the playlist is removed from the display and data model.
 
-- [ ] **Search Functionality**
-  - [ ] Implement a search bar that allows users to filter playlists by name or creator.
+- [X] **Search Functionality**
+  - [X] Implement a search bar that allows users to filter playlists by name or creator.
 
 - [ ] **Sorting Options**
   - [ ] Implement a dropdown or button options that allow users to sort the playlist by name, number of likes, or date added.

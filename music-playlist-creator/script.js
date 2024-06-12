@@ -1,4 +1,4 @@
-const playlistCards = document.querySelector('.playlist-cards');
+let playlistCards = document.querySelector('.playlist-cards');
 const closeModal = document.getElementById("close");
 const modal = document.querySelector(".modal-overlay");
 const shuffleButton = document.querySelector(".shuffle");
@@ -46,7 +46,7 @@ function createSongList(){
 
     playlistsElements.forEach((playlist) => {
         playlist.addEventListener("click", (e) => {
-            if (e.target.className != "like-count"){
+            if (e.target.className != "like-count" && e.target.className != `delete ${playlist.id}`){
                 const image = document.querySelector(".modal-image");
                 const title = document.querySelector(".modal-playlist-title");
                 const creator = document.querySelector(".modal-creator");
@@ -161,8 +161,22 @@ shuffleButton.addEventListener("click", (e) => {
 const deleteButton = document.querySelectorAll(".delete");
 deleteButton.forEach((button) => {
     button.addEventListener("click", (e) => {
-        console.log();
-        data.playlists[button.classList[1]]
-    
+        const playlist = document.getElementById(`${button.classList[1]}`);
+        delete data.playlists[button.classList[1]];
+        playlist.remove()
     })
+})
+
+const search = document.getElementById("search");
+search.addEventListener("input", (e) => {
+    playlistCards = document.querySelector('.playlist-cards');
+    let value = e.target.value;
+    let list = data.playlists.filter((playlist) => playlist.playlist_name.toLowerCase().includes(value.toLowerCase()));
+    playlistCards.innerHTML = ""
+    list.forEach((l) => {
+        let i = l.playlistID;
+        addPlaylist(data.playlists[i]["playlist_name"], data.playlists[i]["playlist_creator"], data.playlists[i]["playlist_art"], data.playlists[i]["likeCount"], i);
+    })
+    console.log(list);
+
 })
