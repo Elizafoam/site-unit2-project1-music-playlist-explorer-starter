@@ -17,21 +17,26 @@ function addPlaylist(name, creator, art, likes, id){
     const titleElement = document.createElement('h3');
     const creatorElement = document.createElement('p');
     const likesElement = document.createElement('button');
+    const deleteElement = document.createElement('button');
 
     container.className = "playlist";
     container.id = `${id}`;
     imageElement.className = "playlist-image";
     likesElement.className = "like-count";
+    deleteElement.className = "delete " + id;
+    
     
     imageElement.src = art;
     titleElement.textContent = name;
     creatorElement.textContent = creator;
     likesElement.textContent = `♡ ${likes}`;
+    deleteElement.textContent = "🗑️";
 
     container.appendChild(imageElement);
     container.appendChild(titleElement);
     container.appendChild(creatorElement);
     container.appendChild(likesElement);
+    container.appendChild(deleteElement)
 
     playlistCards.appendChild(container);
 }
@@ -152,3 +157,12 @@ shuffleButton.addEventListener("click", (e) => {
         createSongCard(data.playlists[playlistID]["songs"][s]["title"], data.playlists[playlistID]["songs"][s]["artist"], data.playlists[playlistID]["songs"][s]["album"], data.playlists[playlistID]["songs"][s]["cover_art"], data.playlists[playlistID]["songs"][s]["duration"], data.playlists[playlistID]["songs"][s]["songID"]);
     }
 });
+
+const deleteButton = document.querySelectorAll(".delete");
+deleteButton.forEach((button) => {
+    button.addEventListener("click", (e) => {
+        console.log();
+        data.playlists[button.classList[1]]
+    
+    })
+})
