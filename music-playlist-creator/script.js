@@ -1,6 +1,7 @@
 const playlistCards = document.querySelector('.playlist-cards');
 const closeModal = document.getElementById("close");
 const modal = document.querySelector(".modal-overlay");
+const shuffleButton = document.querySelector(".shuffle");
 
 function createPlaylistCards(){
     for (let i = 0; i < data.playlists.length; i++){
@@ -42,10 +43,9 @@ function createSongList(){
             const title = document.querySelector(".modal-playlist-title");
             const creator = document.querySelector(".modal-creator");
             
-
-            console.log(playlist.childNodes);
             image.src = playlist.childNodes[0].src;
             title.textContent = playlist.childNodes[1].textContent;
+            title.id = playlist.id;
             creator.textContent = playlist.childNodes[2].textContent;
 
             addSongs(playlist.id);
@@ -127,4 +127,23 @@ likeButtons.forEach((button) => {
     button.addEventListener("mouseout", (e) => {
         button.textContent = prevLike;
     });
+});
+
+
+shuffleButton.addEventListener("click", (e) => {
+    const songList = document.querySelector(".modal-song-list");
+    const playlistID = document.querySelector(".modal-playlist-title").id;
+
+    const set = new Set();
+    songList.innerHTML = "";
+    let size = data.playlists[playlistID]["songs"].length;
+
+
+    while(set.size < size) {
+        set.add(Math.floor(Math.random() * size))
+    }
+
+    for (let s of set){
+        createSongCard(data.playlists[playlistID]["songs"][s]["title"], data.playlists[playlistID]["songs"][s]["artist"], data.playlists[playlistID]["songs"][s]["album"], data.playlists[playlistID]["songs"][s]["cover_art"], data.playlists[playlistID]["songs"][s]["duration"], data.playlists[playlistID]["songs"][s]["songID"]);
+    }
 });

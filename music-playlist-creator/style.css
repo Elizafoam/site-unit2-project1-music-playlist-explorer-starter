@@ -92,6 +92,16 @@ header {
     margin-left: auto;
 }
 
+.modal-pic {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+.shuffle {
+    background-color: rgb(245, 202, 209);
+}
+
 .song-image {
     width: 7rem;
 }

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Music Playlist Explorer</title>
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
     
     <link rel="stylesheet" href="style.css">
 </head>
@@ -25,23 +25,16 @@
         <div class="modal-content">
             <span id="close">&times;</span>
             <div class="modal-playlist-info">
-                <img class="modal-image" src="assets/img/playlist.png" alt="Playlist Image" width="175">
+                <div class="modal-pic">
+                    <img class="modal-image" src="assets/img/playlist.png" alt="Playlist Image" width="175">
+                    <button class="shuffle">Shuffle</button>
+                </div>
                 <div>
                     <h2 class="modal-playlist-title">Playlist Title</h2>
                     <h3 class="modal-creator">Creator Name</h3>
                 </div>
             </div>
-            <div class="modal-song-list">
-                <div class="modal-song">
-                    <img class="song-image" src="assets/img/song.png" alt="Song Image" width="125">
-                    <div class="modal-song-info">
-                        <h4 class="modal-song-title">Song Title</h4>
-                        <h5 class="modal-artist">Artist Name</h5>
-                        <p class="modal-album">Album Name</p>
-                    </div>
-                    <p class="modal-song-time">0:00</p>
-                </div>
-            </div>
+            <div class="modal-song-list"></div>
         </div>
     </div>
 
