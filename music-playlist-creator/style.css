@@ -1,22 +1,35 @@
 body {
-    font-family: 'Arial', sans-serif;
-    
+    background-color: white;
+    color: black;
+    text-align: center;
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
+    font-family: "Manrope", sans-serif;
 }
 
-header {
-    background-color: #53484842;
-    padding: 0.25rem;
+#navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    background-color: #aaa;
 }
 
-.featured-playlist {
+h1 {
+    font-size: 3rem;
+    font-weight: lighter;
+}
 
+#logo {
+    width: 5rem;
+    padding-bottom: 2rem;
 }
 
 .featured-songs {
-
+    padding: 1rem;
+    background-color: #ede9e9;
+    box-shadow: rgba(166, 180, 176, 0.87) 0px 3px 8px;
 }
 
 #featured {
@@ -46,7 +59,6 @@ header {
 
 .playlist:hover {
     box-shadow: rgba(41, 48, 46, 0.87) 0px 3px 8px;
-
 }
 
 .playlist * {
@@ -141,7 +153,7 @@ button:hover {
 
 }
 
- .close {
+ #close {
     color: #aaa;
     float: right;
     font-size: 28px;

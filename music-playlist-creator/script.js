@@ -32,11 +32,13 @@ function addPlaylist(name, creator, art, likes, id){
     likesElement.textContent = `♡ ${likes}`;
     deleteElement.textContent = "🗑️";
 
+    const buttonC = document.createElement("div");
     container.appendChild(imageElement);
     container.appendChild(titleElement);
     container.appendChild(creatorElement);
-    container.appendChild(likesElement);
-    container.appendChild(deleteElement)
+    buttonC.appendChild(likesElement);
+    buttonC.appendChild(deleteElement);
+    container.appendChild(buttonC);
 
     playlistCards.appendChild(container);
 }
