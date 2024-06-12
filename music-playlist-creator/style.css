@@ -43,7 +43,7 @@ header {
 
 /* CSS for Modal */
 .modal-overlay {
-    display: none;
+    visibility: hidden;
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     left: 0;
@@ -71,11 +71,17 @@ header {
 
 .modal-song-list {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
     gap: 1.5rem;
-    padding: 0.25rem;
-    padding-right: 1.25rem;
+    padding: 0.5rem;
     border: 2px solid grey;
+}
+
+.modal-song {
+    display: flex;
+    background-color: #ede9e9;
+    padding: 0.5rem;
 }
 
 .modal-song-info * {
@@ -84,6 +90,29 @@ header {
 
 .modal-song-time {
     margin-left: auto;
+}
+
+.song-image {
+    width: 7rem;
+}
+
+.modal-image {
+    width: 14rem;
+}
+
+.playlist-image {
+    width: 19rem;
+}
+
+button {
+    z-index: 1;
+    background-color: #53484842;
+    padding: 0.5rem 1rem;
+    border: 2px solid rgb(192, 182, 182);
+}
+button:hover {
+    border: 2px solid rgb(80, 72, 72);
+
 }
 
  .close {
