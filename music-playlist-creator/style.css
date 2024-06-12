@@ -10,6 +10,21 @@ header {
     padding: 0.25rem;
 }
 
+.featured-playlist {
+
+}
+
+.featured-songs {
+
+}
+
+#featured {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
 .playlist-cards {
     display: flex;
     padding: 2rem;

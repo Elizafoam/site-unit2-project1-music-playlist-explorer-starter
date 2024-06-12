@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Music Playlist Explorer</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+         <h1>Music Playlist Explorer</h1>
+         <p><a href="index.html">Featured</a></p>
+    </header>
+
+    <main> 
+         <div class="playlist-cards"></div>
+    </main>
+
+    <!-- Modal Structure -->
+    <div class="modal-overlay">
+        <div class="modal-content">
+            <span id="close">&times;</span>
+            <div class="modal-playlist-info">
+                <div class="modal-pic">
+                    <img class="modal-image" src="assets/img/playlist.png" alt="Playlist Image" width="175">
+                    <button class="shuffle">Shuffle</button>
+                </div>
+                <div>
+                    <h2 class="modal-playlist-title">Playlist Title</h2>
+                    <h3 class="modal-creator">Creator Name</h3>
+                </div>
+            </div>
+            <div class="modal-song-list"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div>Copyright © Elizafoam 2024</div>
+    </footer>
+    <script src="data/data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

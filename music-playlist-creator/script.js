@@ -3,9 +3,11 @@ const closeModal = document.getElementById("close");
 const modal = document.querySelector(".modal-overlay");
 const shuffleButton = document.querySelector(".shuffle");
 
+
 function createPlaylistCards(){
     for (let i = 0; i < data.playlists.length; i++){
-        addPlaylist(data.playlists[i]["playlist_name"], data.playlists[i]["playlist_creator"], data.playlists[i]["playlist_art"], data.playlists[i]["likeCount"], i)
+        const container = document.querySelector(".featured-playlist");
+        addPlaylist(data.playlists[i]["playlist_name"], data.playlists[i]["playlist_creator"], data.playlists[i]["playlist_art"], data.playlists[i]["likeCount"], i);
     }
 }
 
