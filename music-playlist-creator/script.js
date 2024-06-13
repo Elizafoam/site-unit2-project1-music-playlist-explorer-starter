@@ -179,6 +179,5 @@ search.addEventListener("input", (e) => {
         let i = l.playlistID;
         addPlaylist(data.playlists[i]["playlist_name"], data.playlists[i]["playlist_creator"], data.playlists[i]["playlist_art"], data.playlists[i]["likeCount"], i);
     })
-    console.log(list);
 
 })

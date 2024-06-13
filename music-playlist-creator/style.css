@@ -5,6 +5,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Manrope", sans-serif;
+    height: 100vh;
 }
 
 #navigation {
@@ -42,6 +43,7 @@ h1 {
 .playlist-cards {
     display: flex;
     padding: 2rem;
+    padding-bottom: 4rem;
     gap: 1rem;
     justify-content: center;
     align-items: center;
@@ -173,5 +175,6 @@ footer {
     width: 100vw;
     padding: 0.75rem;
     bottom: 0;
+    position:fixed;
     left: 0;
 }

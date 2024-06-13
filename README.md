@@ -4,8 +4,6 @@ Submitted by: **Elizabeth Johnson**
 
 Estimated time spent: **7** hours spent in total
 
-Deployed Application: [Music Playlist Explorer Deployed Site](https://elizafoam.github.io/site-unit2-project1-music-playlist-explorer-starter/)
-
 ### Application Features
 
 #### CORE FEATURES
